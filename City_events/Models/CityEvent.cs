@@ -17,9 +17,9 @@ namespace ItemsControlWrapPanelExample.Models
 
         private string _Date = "";
 
-        private category _Category;
+        private string _Category = "";
 
-        private double _Price = 0;
+        private string _Price = "";
         public string Header
         {
             get => _Header;
@@ -47,33 +47,12 @@ namespace ItemsControlWrapPanelExample.Models
             get => _Description;
             set => SetAndRaise(ref _Description, CheckStringLenght(value));
         }
-        public double Price
+        public string Price
         {
             get => _Price;
             set => SetAndRaise(ref _Price, value);
         }
-        public enum category
-        {
-            [XmlEnum("Дети")]
-            Children,
-            [XmlEnum("Спорт")]
-            Sport,
-            [XmlEnum("Культура")]
-            Culture,
-            [XmlEnum("Экскурсия")]
-            Excursion,
-            [XmlEnum("Образ жизни")]
-            Lifestyles,
-            [XmlEnum("Вечеринка")]
-            Party,
-            [XmlEnum("Обучение")]
-            Education,
-            [XmlEnum("Онлайн")]
-            Online,
-            [XmlEnum("Шоу")]
-            Show
-        }
-        public category Category
+        public string Category
         {
             get => _Category;
             set => SetAndRaise(ref _Category, value);
